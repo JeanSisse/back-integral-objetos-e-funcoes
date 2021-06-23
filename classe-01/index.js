@@ -27,5 +27,15 @@ const prova = {
 };
 
 function corrigirProva(prova) {
-    // body...
+    let acertos = 0;
+
+    for (let questao of prova.questoes){
+        if (questao.resposta === questao.correta) {
+            acertos++;
+        }
+    }
+
+    console.log(`O aluno(a) ${prova.aluno} acertou ${acertos} questoes e obteve nota ${acertos * 2}`);
 }
+
+corrigirProva(prova);
